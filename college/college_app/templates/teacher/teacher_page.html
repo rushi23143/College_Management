@@ -1,0 +1,39 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Teacher page</title>
+    <style>
+      body {
+     background: url('https://www.thebalancecareers.com/thmb/3TXSZvKKQXcWu3Zu3qU8ag158MU=/3864x2577/filters:fill(auto,1)/school-books-on-desk--education-concept-871454068-5b548900c9e77c005b04fc8c.jpg') fixed;
+    background-size: cover;
+}
+</style>
+  </head>
+  <body>
+    {% block content %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Teacher Page</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Post</a>
+            <a class="nav-link" href="{% url 'teacher_logout' %}">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    {% endblock %}
+  </body>
+</html>

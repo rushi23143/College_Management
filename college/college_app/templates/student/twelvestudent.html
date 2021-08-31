@@ -1,0 +1,134 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>student page</title>
+    <style>
+      body {
+     background: url('https://wallpaperaccess.com/full/124383.jpg') fixed;
+    background-size: cover;
+}
+      *[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: #e7e9d7;
+}
+
+*[role="form"] h2 { 
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+    </style>
+  </head>
+  <body><br>
+    {% block content %}
+    <div
+      class="bg-image"
+      style="
+        background-image: url('');
+        height: 100vh;
+      "
+    >
+      <div class="mask mask-custom"></div>
+     <center>
+      <div class="container">
+      <form method="POST" class="form-inline" class="form-horizontal" role="form">
+        <h2>Twelth Student</h2><br>
+        <div class="form-group">
+        {% csrf_token %}
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Name</label>
+            <div class="col-sm-9">
+              <input type="text" id="name" name="name" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">English</label>
+            <div class="col-sm-9">
+              <input type="number" step="0.01" min="0" max="100" id="english" name="english" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Hindi</label>
+            <div class="col-sm-9">
+              <input type="number" step="0.01" min="0" max="100" id="hindi" name="hindi" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Physics</label>
+            <div class="col-sm-9">
+              <input type="number" step="0.01" min="0" max="100" id="english" name="physics" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Chemistry</label>
+            <div class="col-sm-9">
+              <input type="number" step="0.01" min="0" max="100" id="hindi" name="chemistry" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group"> 
+            <label class="col-sm-3 control-label">Maths</label>
+            <div class="col-sm-9">
+              <input type="number" step="0.01" min="0" max="100" id="maths" name="maths" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Computer</label>
+            <div class="col-sm-9">
+              <input type="number" step="0.01" min="0" max="100" id="Computer" name="computer" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Total</label>
+            <div class="col-sm-9">
+              <input type="number" step="0.01" min="0" max="600" id="Computer" name="total" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group">    
+            <label class="col-sm-3 control-label">10th%</label>
+            <div class="col-sm-9">
+              <input type="number" step="0.01" min="0" max="100" id="tenth" name="tenth" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group">    
+            <label class="col-sm-3 control-label">12th%</label>
+            <div class="col-sm-9">
+              <input type="number" step="0.01" min="0" max="100" id="tenth" name="twelth" class="form-control" autofocus>
+            </div>
+          </div><br><br>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Sport</label>
+            <div class="col-sm-9">
+              <input type="text" id="sport" name="sport" class="form-control" autofocus>             
+            </div>
+          </div><br><br>
+          <button type="submit" class="btn btn-dark bg-dark">Save</button>
+      </div>
+  
+    </form>
+  </div>
+  </center>
+</body>
+</div>
+    {% endblock %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
